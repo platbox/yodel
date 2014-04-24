@@ -1,0 +1,18 @@
+## Common Types
+- typedef: { type: Integer, name: Uid }
+
+## Events
+- record:
+    name: NewMessageEvent
+    fields:
+     - { req: required, type: Uid   , name: from }
+     - { req: required, type: String, name: text }
+     - { req: optional, type: String, name: date }
+
+- variant:
+    name: Event
+    values:
+     - { tag: NewMessageEvent, params: [NewMessageEvent] }
+     - { tag: Nothing                                    }
+
+- typedef: { type: List Event, name: Events }

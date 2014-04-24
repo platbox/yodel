@@ -1,0 +1,10 @@
+{application, yodel, [
+    {description, "Handmade YAML based language-specific model and marshalling code generator"},
+    {vsn, "1"},
+    {registered, []},
+    {applications, [
+        kernel,
+        stdlib
+    ]},
+    {env, []}
+]}.
